@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: cursive;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  li {
+    list-style: none;
+  }
+  #space{
+      height: 100px;
+  }
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: teal;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
+  
+  .nav-links a {
+    color: #fff;
+  }
+  
+  /* LOGO */
+  
+  .logo {
+    font-size: 32px;
+    width: 15%;
+  }
+  
+  /* NAVBAR MENU */
+  
+  .menu {
+    display: flex;
+    align-content: flex-start;
+    width: 100%;
+    float: left;
+    gap: 1em;
+  
+    font-size: 18px;
+  }
+  
+  .menu li:hover {
+    background-color: #4c9e9e;
+  
+    border-radius: 5px;
+  
+    transition: 0.3s ease;
+  }
+  
+  .menu li {
+    padding: 5px 14px;
+  }
+  
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  /*HAMBURGER MENU*/
+  
+  .hamburger {
+    display: none;
+  
+    font-size: 24px;
+  
+    user-select: none;
+  }
+  
+  /* search bar */
+  
+  .search11{
+      justify-content: space-between;
+      display: flex;
+  }
+  .search21{
+      display:none;
+  }
+  #search1{
+      height: 30px;
+      /* width: 25%; */
+      border-radius: 8px;
+      margin: 3px;
+      padding: 4px;
+  }
+  #search2{
+      height: 30px;
+      /* width: 25%; */
+      border-radius: 8px;
+      margin: 3px;
+      padding: 4px;
+  }
+  #btn{
+      height: 30px;
+      border-radius: 8px;
+      margin: 3px;
+      width: 100px;
+      background: greenyellow;
+  }
+  
+  #btn:hover{
+      box-shadow: 0 4px 8px 0 rgba(6, 240, 68, 0.7);
+  
+  }
+  #bars{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+  #upper{
+    display: flex;
+    align-items: center;
+  }
+  
+  /* card */
+  #pad{
+    padding: 0 30px 0 30px;
+  }
+  .card{
+    width:fit-content;
+    min-width:900px;
+    margin: 20px auto;
+      background: white;
+      border: #4c9e9e solid;
+      padding: 20px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: space-evenly;
+  }
+  
+  .card:hover{
+      box-shadow: 8px 8px 8px 0 rgb(76, 158, 158, 1);
+  }
+  
+  .left{
+      width: 20%;
+      float: left;
+  }
+  
+  .right{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      float: right;
+  }
+  
+  img{
+      width: 200px;
+  }
+  
+  /* #like{
+      height: 40px;
+      width: 100px;
+      background-color: green;
+      margin: 5px;
+      padding: 1px;
+      color: white;
+      border-radius: 5px;
+  }
+  #like:hover{
+      box-shadow: 3px 3px 3px 0 rgba(6, 240, 68, 0.7);
+  }
+  #dislike{
+      height: 40px;
+      width: 100px;
+      background-color: red;
+      margin: 5px;
+      padding: 1px;
+      color: white;
+      border-radius: 5px;
+  }
+  #dislike:hover{
+      box-shadow: 3px 3px 3px 0 rgb(250, 1, 1,0.7);
+  } */
+
+  [id="heart"] {
+    position: absolute;
+    left: -100vw;
+  }
+  
+  [for="heart"] {
+    color: #aab8c2;
+    cursor: pointer;
+    font-size: 2em;
+    align-self: center;  
+    transition: color 0.2s ease-in-out;
+  }
+  
+  [for="heart"]:hover {
+    color: grey;
+  }
+  
+  [for="heart"]::selection {
+    color: none;
+    background: transparent;
+  }
+  
+  [for="heart"]::moz-selection {
+    color: none;
+    background: transparent;
+  }
+  
+  [id="heart"]:checked + label {
+    color: #e2264d;
+    will-change: font-size;
+    animation: heart 1s cubic-bezier(.17, .89, .32, 1.49);
+  }
+  
+  
+  
+  @keyframes heart {0%, 17.5% {font-size: 0;}}
+
+  
+  #footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: auto;
+    background-color: teal;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+  }
+  .butn{
+    height: 30px;
+    width: 100px;
+    color: black;
+    background-color: greenyellow;
+    margin: 5px;
+    padding: 1px;
+    border-radius: 5px;
+}
+.butn:hover{
+      box-shadow: 0 4px 8px 0 rgba(6, 240, 68, 0.7);
+  
+}
+
+  /* APPLYING MEDIA QUERIES */
+  
+  @media (max-width: 1075px) {
+    li{
+        width: 100%;
+    }
+    .menu {
+      display: none;
+      position: absolute;
+      background-color: teal;
+      right: 0;
+      left: 0;
+      text-align: center;
+      padding: 16px 0;
+    }
+  
+    .menu li:hover {
+      display: inline-block;
+      background-color: #4c9e9e;
+      transition: 0.3s ease;
+    }
+  
+    .menu li + li {
+      margin-top: 12px;
+    }
+  
+    input[type="checkbox"]:checked ~ .menu {
+      display: block;
+    }
+    .hamburger {
+      display: block;
+      right: 0px;
+      /* float: right; */
+    }
+  
+    .dropdown {
+      left: 50%;
+      top: 30px;
+      transform: translateX(35%);
+    }
+  
+    .dropdown li:hover {
+      background-color: #4c9e9e;
+    }
+  
+    .search11{
+      display: none;
+    }
+    .search21{
+      display: contents;
+    }
+  }
+
+  @media (max-width: 950px) {
+  .card{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 600px;
+  }
+  .left{
+    width: 35%;
+  }
+
+
+}
+@media (max-width: 600px) {
+  .card{
+    min-width: 400px;
+  }
+}
+
+ @media (max-width: 400px) {
+  .card{
+    min-width: 300px;
+  }
+    .left{
+    width: 80%;
+  }
+ }
